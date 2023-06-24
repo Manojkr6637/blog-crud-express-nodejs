@@ -16,8 +16,8 @@
  const blogs = []
  app.get('/', (req, res) => {
      res.render('index', {
-         title: 'Blogs here',
-         body: 'Good resources of blogs here',
+         title: 'Blogs here update',
+         body: 'Good resources of blogs here upate 11',
          datas: blogs,
          isRecoud: blogs.length,
      });
