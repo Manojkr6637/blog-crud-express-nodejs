@@ -1,0 +1,17 @@
+ 
+     {{>header}}
+    <section>
+      <div class="container">
+        <h1>{{title}}</h1>
+         <p>{{body}}</h1>
+        <ul class="gallery">
+          {{#each datas}}
+            <li class="gallery-li"> <a href="/{{this.id}}"
+          
+            ><img src="{{this.image}}"   width="100" hight="100"/></a></li>
+          {{/each}}
+        </ul>
+      </div>
+    </section> 
+    {{>footer}}
+ 

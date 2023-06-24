@@ -1,0 +1,47 @@
+ 
+     {{>header}}
+    <section>
+      <div class="container">
+        <h1>{{title}}</h1>
+         <p>{{body}}</h1>
+        <table class="table">
+            <thead>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Created</th>
+                <th>Action</th>
+            </thead>
+            <tbody> 
+               {{#if isRecoud}}
+                {{#each datas}}
+             <tr>
+                <td>
+                {{this.id}}
+                </td>
+                 <td>
+                    {{this.title}}
+                </td>
+                 <td>
+                    {{this.created}}
+                </td>
+                 <td>
+                   <a href="edit/{{this.id}}">Edit</a>
+                    <a href="delete/{{this.id}}">Delete</a>
+                </td>
+             </tr>
+               {{/each}}
+               {{else}}
+                
+                <tr>
+                <td colspan="3">
+                Reord not available
+                </td>
+             </tr>
+              {{/if}}
+            </tbody>
+            
+         </table>
+      </div>
+    </section> 
+    {{>footer}}
+ 
